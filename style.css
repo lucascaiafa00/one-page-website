@@ -68,7 +68,7 @@ a{
     flex-direction: column;
     justify-content: end;
     text-align: center;
-    min-height: 90vh;
+    min-height: 600px;
 }
 
 h1 {
@@ -91,6 +91,10 @@ h3 {
     text-transform: uppercase;
     color: #76323f;
 
+}
+
+p{
+    font-size: 15px;
 }
 
 #inicio p {
@@ -224,7 +228,6 @@ h3 {
 
 #contato {
     position: relative;
-    height: 100vh;
 }
 
 #contato h2{
@@ -298,6 +301,7 @@ input,button,textarea{
 footer {
     background-color: #76323f;
     text-align: center;
+    margin-top: 20px;
     padding: 20px;
     color: #d7cec7;
     font-size: 15px;
