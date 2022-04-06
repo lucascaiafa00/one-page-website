@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Renata Melo Beleza</title>
+</head>
+
+<body>
+    <header>
+        <ul class="menu">
+            <li><a href="#sobre-mim">sobre mim</a></li>
+            <li><a href="#serviços">serviços</a></li>
+        </ul>
+        <a href="#inicio"><img id="logo" src="img/logo.png" alt="logo"></a>
+        <ul class="menu">
+            <li><a href="#atendimento">atendimento</a></li>
+            <li><a href="#contato">contato</a></li>
+        </ul>
+    </header>
+    <section id="inicio">
+        <h1>Renata Melo Beleza</h1>
+        <p>"Levando a beleza até você"</p>
+        <img class="wave" src="img/svg (1).png" alt="wave">
+    </section>
+    <section id="sobre-mim">
+        <h2>sobre mim</h2>
+        <img id="foto" src="img/renata.png" alt="foto-renata">
+        <p>Oiê! Sou Renata, tenho 40 anos e sou mãe de quatro meninos lindos! Comecei a fazer o curso de cabeleireira
+            com 14 anos (lá se vão 35 anos de profissão) e desde então continuei meu aprendizado na área da beleza! Meu
+            segundo curso foi o de epilação e minha coleção de certificados estão pra mais de 50, incluindo os
+            aperfeiçoamentos em casa área como colorimetria, cursos em grandes empresas como Keune e Alfa Parf. Sempre
+            me atualizando e buscando a parceria com marcas de qualidade, quero levar aos meus clientes o que há de
+            melhor na área da beleza, tornando o seu momento único!</p>
+        <img class="wave" src="img/svg (5).png" alt="wave">
+    </section>
+    <section id="servicos">
+        <h2> serviços</h2>
+
+        <div class="servico">
+            <h3>Cabelo</h3>
+            <img class="servico-icon" src="img/tesoura.png" alt="">
+            <p>Corte de cabelo feminino e masculino, escova, tratamentos capilares, colorimetria, luzes, mechas, escova
+                progressiva e penteado.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>design de sobrancelhas</h3>
+            <img class="servico-icon" src="img/sobrancelha.png" alt="">
+            <p>Técnica utilizada para desenhar as sobrancelhas com o objetivo de valorizar o rosto e a expressão da
+                cliente, levando em consideração a personalidade e o formato de rosto de cada um.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>epilação</h3>
+            <img class="servico-icon" src="img/perna.png" alt="">
+            <p>Técnica de remoção dos pêlos desde a raiz, inclusive o bulbo piloso. Utilizo ceras de qualidade e
+                produtos descartáveis, visando a segurança e bem estar do cliente.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>maquiagem</h3>
+            <img class="servico-icon" src="img/batom.png" alt="">
+            <p>Simples ou para grandes ocasiões como casamento, formatura ou debutantes.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+
+        <button class="prev" onclick="changeService('prev')"></button>
+        <button class="next" onclick="changeService('next')"></button>
+
+        <img class="wave" src="img/svg (2).png" alt="wave">
+    </section>
+    <section id="atendimento">
+        <h2>atendimento</h2>
+        <h3>local</h3>
+        <p>Petrópolis - RJ Condomínio La Villette Estrada União e Indústria, 7299 Nogueira</p>
+        <h3>horário de atendimento</h3>
+        <p>De domingo a sábado, das 9h as 19h com agendamento prévio</p>
+        <img class="wave" src="img/svg (6).png" alt="wave">
+    </section>
+    <section id="contato">
+        <h2>contato</h2>
+
+        <form method="get" action="">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar">
+        </form>
+        <div class="redes-sociais">
+
+            <div class="rede-social">
+                <img src="img/whatsapp.png" alt="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=5524981087289" target="_blank" class="rede-social">(24)
+                    98108-7289</a>
+            </div>
+            <div class="rede-social">
+
+                <img src="img/gmail.png" alt="email">
+                <a href="mailto:renatamelobeleza@gmail.com?" target="_blank"
+                    class="rede-social">renatamelobeleza@gmail.com<a>
+
+            </div>
+            <div class="rede-social">
+
+                <img src="img/instagram.png" alt="instagram">
+                <a href="https://www.instagram.com/renatamelobeleza/" target="_blank" class="rede-social">
+                    renatamelobeleza</a>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Made by Lucas Caiafa</p>
+        <a href="https://www.linkedin.com/in/lucas-caiafa-08398a232" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+        <a href="https://github.com/lucascaiafa00" target="_blank"><img src="img/github.png" alt="github"></a>
+        <a href="https://www.instagram.com/lucascaiafa00/" target="_blank"><img src="img/instagram2.png" alt="instagram"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
