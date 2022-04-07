@@ -337,7 +337,8 @@ footer img{
     ul {
         flex-direction: column;
         text-align: center;
-        display: none;
+        height: 0;
+        overflow: hidden;
         transition: all .3s ease;
     }
 
@@ -372,7 +373,8 @@ footer img{
     }
 
     #control-nav:checked ~ ul{
-        display: block;
+        height: auto;
+        overflow: auto;
     }
     
     #logo {
