@@ -1,413 +1,128 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,800;1,100;1,400&display=swap');
-
-/*
-PALETA:
-#76323f
-#c09f80
-#565656
-#d7cec7
-*/
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-    scroll-behavior: smooth;
-}
-
-:root{
-    --color1: #76323f;
-    --color2: #c09f80;
-    --color3: #565656;
-    --color4: #d7cec7;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-header {
-    position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 15px;
-    width: 85%;
-    padding: 5px 20px;
-    background-color: var(--color1);
-    border: solid 2px var(--color2);
-    z-index: 2;
-}
-
-input[type=checkbox]{
-    display: none;
-}
-
-ul {
-    display: flex;
-    justify-content: space-evenly;
-    list-style: none;
-    width: 100%;
-}
-
-ul a {
-    color: var(--color4);
-    text-transform: uppercase;
-}
-
-ul a:hover{
-    color: var(--color2);
-}
-
-a{
-    text-decoration: none;
-}
-
-#logo {
-    height: 80px;
-}
-
-.wave {
-    width: 100%;
-    height: 200px;
-    position: relative;
-    bottom: -5px;
-    pointer-events: none;
-}
-
-#inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    text-align: center;
-    min-height: 600px;
-}
-
-h1 {
-    font-size: 80px;
-    font-weight: 500;
-    padding: 0 5%;
-    color: var(--color1);
-}
-
-h2 {
-    font-size: 30px;
-    text-align: center;
-    color: var(--color2);
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-h3 {
-    font-size: 25px;
-    text-transform: uppercase;
-    color: var(--color1);
-
-}
-
-p{
-    font-size: 15px;
-}
-
-#inicio p {
-    color: var(--color2);
-    letter-spacing: 6px;
-    font-style: italic;
-    margin-bottom: 50px;
-}
-
-#sobre-mim {
-    background-color: var(--color1);
-}
-
-#foto {
-    float: left;
-    max-width: 250px;
-    margin: 5%;
-    margin-bottom: 0;
-}
-
-#sobre-mim p {
-    text-align: justify;
-    line-height: 25px;
-    margin: 8%;
-    color: var(--color4);
-}
-
-#servicos {
-    position: relative;
-}
-
-.servico {
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
-}
-
-.servico.show {
-    position: static;
-    display: block;
-    pointer-events: all;
-    opacity: 1;
-    max-width: 600px;
-    margin: auto;
-    margin-top: 40px;
-    text-align: center;
-    padding: 0 5%;
-
-}
-
-.servico-icon {
-    width: 200px;
-    margin: 20px;
-}
-
-.servico p {
-    font-size: 18px;
-    color: var(--color3);
-}
-
-.prev, .next {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    left: 20%;
-    top: 225px;
-    border: none;
-    background: none;
-    cursor: pointer;
-}
-
-.next {
-    left: auto;
-    right: 20%;
-    transform: rotate(180deg);
-}
-
-.prev::after, .next::after {
-    content: "";
-    width: 5px;
-    height: 31px;
-    background-color: var(--color2);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-}
-
-.prev::before, .next::before {
-    content: "";
-    width: 5px;
-    height: 31px;
-    background-color: var(--color2);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) rotate(135deg);
-}
-
-.fotos-button {
-    background-color: var(--color2);
-    color: var(--color4);
-    border-radius: 20px;
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all .3s ease;
-}
-
-.fotos-button:hover {
-    background-color: var(--color3);
-}
-
-#atendimento{
-    background-color: var(--color1);
-    text-align: center;
-}
-
-#atendimento h3{
-    color: var(--color2);
-    padding: 20px 10%;
-}
-
-#atendimento p{
-    color: #fff;
-    padding: 10px 10%;
-}
-
-
-#contato {
-    position: relative;
-}
-
-#contato h2{
-    margin: 20px;
-}
-
-form {
-    max-width: 400px;
-    background-color: var(--color1);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 0 5px;
-    margin: auto;
-}
-
-label {
-    color: var(--color2);
-    letter-spacing: 2px;
-}
-
-input, textarea {
-    width: 100%;
-    padding: 5px;
-    margin: 5px 0;
-    color: var(--color3);
-    border: none;
-    border-radius: 10px;
-}
-
-#control-nav {
-    text-transform: uppercase;
-    color: var(--color1);
-    font-weight: 600;
-    border: none;
-    transition: .5s;
-}
-
-input[type=submit]:hover {
-    cursor: pointer;
-    background-color: var(--color4);
-}
-
-.rede-social img {
-    width: 30px;
-}
-
-.rede-social {
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    color: var(--color3);
-    font-size: 14px;
-    transition: all .2s ease;
-}
-
-.rede-social:hover {
-    color: var(--color1);
-}
-
-.redes-sociais {
-    margin-top: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-input,button,textarea{
-    outline: none;
-}
-
-footer {
-    background-color: var(--color1);
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px;
-    color: var(--color4);
-    font-size: 15px;
-    font-weight: 100;
-}
-
-footer img{
-    width: 30px;
-    margin: 5px;
-}
-
-@media screen and (max-width:900px) {
-    header{
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    ul {
-        flex-direction: column;
-        text-align: center;
-        display: none;
-        transition: all .3s ease;
-    }
-
-    li{
-        border-top: solid 1px var(--color2);
-        padding: 5px;
-    }
-
-    header .control-nav {
-        position: absolute;
-        right: 20px;
-        top: 30px;
-        display: block;
-        width: 30px;
-        padding: 5px 0;
-        border: solid #c09f80;
-        border-width: 4px 0;
-        z-index: 2;
-        cursor: pointer;
-        transition: all .3s ease;
-    }
-
-    header .control-nav:before {
-        content: "";
-        display: none;
-        height: 3px;
-        background: #333;
-    }
-
-    #control-nav:checked + .control-nav{
-        transform: rotate(90deg);
-    }
-
-    #control-nav:checked ~ ul{
-        display: block;
-    }
-    
-    #logo {
-        height: 65px;
-    }
-
-    .wave {
-        width: auto;
-        min-width: 200%;
-    }
-
-    h1 {
-        font-size: 70px;
-    }
-
-    #sobre-mim {
-        text-align: center;
-    }
-
-    #foto {
-        float: none;
-    }
-}
-
-@media screen and (max-width:600px) {
-    h1 {
-        font-size: 50px;
-    }
-
-    .prev, .next {
-        left: 10%;
-    }
-
-    .next {
-        left: auto;
-        right: 10%;
-    }
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Renata Melo Beleza</title>
+</head>
+
+<body>
+    <header>
+        <a href="#inicio"><img id="logo" src="img/logo.png" alt="logo"></a>
+        <input type="checkbox" id="control-nav" />
+        <label for="control-nav" class="control-nav"></label>
+        <ul>
+            <li><a href="#sobre-mim">sobre mim</a></li>
+            <li><a href="#servicos">serviços</a></li>
+            <li><a href="#atendimento">atendimento</a></li>
+            <li><a href="#contato">contato</a></li>
+        </ul>
+    </header>
+    <section id="inicio">
+        <h1>Renata Melo Beleza</h1>
+        <p>"Levando a beleza até você"</p>
+        <img class="wave" src="img/svg (1).png" alt="wave">
+    </section>
+    <section id="sobre-mim">
+        <h2>sobre mim</h2>
+        <img id="foto" src="img/renata.png" alt="foto-renata">
+        <p>Oiê! Sou Renata, tenho 40 anos e sou mãe de quatro meninos lindos! Comecei a fazer o curso de cabeleireira
+            com 14 anos (lá se vão 35 anos de profissão) e desde então continuei meu aprendizado na área da beleza! Meu
+            segundo curso foi o de epilação e minha coleção de certificados estão pra mais de 50, incluindo os
+            aperfeiçoamentos em casa área como colorimetria, cursos em grandes empresas como Keune e Alfa Parf. Sempre
+            me atualizando e buscando a parceria com marcas de qualidade, quero levar aos meus clientes o que há de
+            melhor na área da beleza, tornando o seu momento único!</p>
+        <img class="wave" src="img/svg (5).png" alt="wave">
+    </section>
+    <section id="servicos">
+        <h2> serviços</h2>
+
+        <div class="servico">
+            <h3>Cabelo</h3>
+            <img class="servico-icon" src="img/tesoura.png" alt="">
+            <p>Corte de cabelo feminino e masculino, escova, tratamentos capilares, colorimetria, luzes, mechas, escova
+                progressiva e penteado.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>design de sobrancelhas</h3>
+            <img class="servico-icon" src="img/sobrancelha.png" alt="">
+            <p>Técnica utilizada para desenhar as sobrancelhas com o objetivo de valorizar o rosto e a expressão da
+                cliente, levando em consideração a personalidade e o formato de rosto de cada um.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>epilação</h3>
+            <img class="servico-icon" src="img/perna.png" alt="">
+            <p>Técnica de remoção dos pêlos desde a raiz, inclusive o bulbo piloso. Utilizo ceras de qualidade e
+                produtos descartáveis, visando a segurança e bem estar do cliente.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+        <div class="servico">
+            <h3>maquiagem</h3>
+            <img class="servico-icon" src="img/batom.png" alt="">
+            <p>Simples ou para grandes ocasiões como casamento, formatura ou debutantes.</p>
+            <button class="fotos-button" onclick="showFotos()">fotos</button>
+        </div>
+
+        <button class="prev" onclick="changeService('prev')"></button>
+        <button class="next" onclick="changeService('next')"></button>
+
+        <img class="wave" src="img/svg (2).png" alt="wave">
+    </section>
+    <section id="atendimento">
+        <h2>atendimento</h2>
+        <h3>local</h3>
+        <p>Petrópolis - RJ Condomínio La Villette Estrada União e Indústria, 7299 Nogueira</p>
+        <h3>horário de atendimento</h3>
+        <p>De domingo a sábado, das 9h as 19h com agendamento prévio</p>
+        <img class="wave" src="img/svg (6).png" alt="wave">
+    </section>
+    <section id="contato">
+        <h2>contato</h2>
+
+        <form method="get" action="">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <label for="mensagem">Mensagem</label>
+            <textarea name="mensagem" id="mensagem" cols="30" rows="10"></textarea>
+            <input type="submit" value="enviar">
+        </form>
+        <div class="redes-sociais">
+
+            <div class="rede-social">
+                <img src="img/whatsapp.png" alt="whatsapp">
+                <a href="https://api.whatsapp.com/send?phone=5524981087289" target="_blank" class="rede-social">(24)
+                    98108-7289</a>
+            </div>
+            <div class="rede-social">
+
+                <img src="img/gmail.png" alt="email">
+                <a href="mailto:renatamelobeleza@gmail.com?" target="_blank"
+                    class="rede-social">renatamelobeleza@gmail.com<a>
+
+            </div>
+            <div class="rede-social">
+
+                <img src="img/instagram.png" alt="instagram">
+                <a href="https://www.instagram.com/renatamelobeleza/" target="_blank" class="rede-social">
+                    renatamelobeleza</a>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Made by Lucas Caiafa</p>
+        <a href="https://www.linkedin.com/in/lucas-caiafa-08398a232" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+        <a href="https://github.com/lucascaiafa00" target="_blank"><img src="img/github.png" alt="github"></a>
+        <a href="https://www.instagram.com/lucascaiafa00/" target="_blank"><img src="img/instagram2.png" alt="instagram"></a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
