@@ -16,6 +16,13 @@ PALETA:
     scroll-behavior: smooth;
 }
 
+:root{
+    --color1: #76323f;
+    --color2: #c09f80;
+    --color3: #565656;
+    --color4: #d7cec7;
+}
+
 body {
     overflow-x: hidden;
 }
@@ -30,7 +37,7 @@ header {
     top: 15px;
     width: 85%;
     padding: 5px;
-    background-color: #76323fe8;
+    background-color: var(--color1);
     border: solid 2px #c09f80;
     z-index: 2;
 }
@@ -75,7 +82,7 @@ h1 {
     font-size: 80px;
     font-weight: 500;
     padding: 0 5%;
-    color: #76323f;
+    color: var(--color1);
 }
 
 h2 {
@@ -89,7 +96,7 @@ h2 {
 h3 {
     font-size: 25px;
     text-transform: uppercase;
-    color: #76323f;
+    color: var(--color1);
 
 }
 
@@ -105,7 +112,7 @@ p{
 }
 
 #sobre-mim {
-    background-color: #76323f;
+    background-color: var(--color1);
 }
 
 #foto {
@@ -211,7 +218,7 @@ p{
 }
 
 #atendimento{
-    background-color: #76323f;
+    background-color: var(--color1);
     text-align: center;
 }
 
@@ -236,7 +243,7 @@ p{
 
 form {
     max-width: 400px;
-    background-color: #76323F;
+    background-color: var(--color1);
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 5px;
