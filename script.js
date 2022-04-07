@@ -36,13 +36,13 @@ function showImages(serviceN) {
     }
 }
 
-images.forEach(image => {
-    image.onclick = ()=>{
-        fullImageContainer.classList.add("show")
-        fullImage.src = image.getAttribute("data-full-image")
-    }
-});
-
 function closeImage() {
     fullImageContainer.classList.remove("show")
 }
+
+images.forEach(image => {
+    image.onclick = ()=>{
+        fullImage.src = image.getAttribute("data-full-image")
+        fullImageContainer.classList.add("show")
+    }
+});
