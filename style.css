@@ -492,4 +492,9 @@ footer img{
         left: auto;
         right: 10%;
     }
+
+    .gallery img{
+        max-width: 150px;
+        filter: brightness(100%);
+    }
 }
