@@ -30,28 +30,36 @@ body {
 header {
     position: fixed;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     left: 50%;
     transform: translateX(-50%);
     top: 15px;
     width: 85%;
-    padding: 5px;
+    padding: 5px 20px;
     background-color: var(--color1);
-    border: solid 2px #c09f80;
+    border: solid 2px var(--color2);
     z-index: 2;
 }
 
-.menu {
+input[type=checkbox]{
+    display: none;
+}
+
+ul {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    width: 40%;
+    width: 100%;
 }
 
-.menu a {
-    color: #d7cec7;
+ul a {
+    color: var(--color4);
     text-transform: uppercase;
+}
+
+ul a:hover{
+    color: var(--color2);
 }
 
 a{
@@ -88,7 +96,7 @@ h1 {
 h2 {
     font-size: 30px;
     text-align: center;
-    color: #c09f80;
+    color: var(--color2);
     font-weight: 500;
     text-transform: uppercase;
 }
@@ -105,7 +113,7 @@ p{
 }
 
 #inicio p {
-    color: #c09f80;
+    color: var(--color2);
     letter-spacing: 6px;
     font-style: italic;
     margin-bottom: 50px;
@@ -126,7 +134,7 @@ p{
     text-align: justify;
     line-height: 25px;
     margin: 8%;
-    color: #d7cec7;
+    color: var(--color4);
 }
 
 #servicos {
@@ -159,7 +167,7 @@ p{
 
 .servico p {
     font-size: 18px;
-    color: #565656;
+    color: var(--color3);
 }
 
 .prev, .next {
@@ -183,7 +191,7 @@ p{
     content: "";
     width: 5px;
     height: 31px;
-    background-color: #c09f80;
+    background-color: var(--color2);
     position: absolute;
     top: 0;
     left: 50%;
@@ -194,7 +202,7 @@ p{
     content: "";
     width: 5px;
     height: 31px;
-    background-color: #c09f80;
+    background-color: var(--color2);
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -202,8 +210,8 @@ p{
 }
 
 .fotos-button {
-    background-color: #c09f80;
-    color: #d7cec7;
+    background-color: var(--color2);
+    color: var(--color4);
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
@@ -214,7 +222,7 @@ p{
 }
 
 .fotos-button:hover {
-    background-color: #565656;
+    background-color: var(--color3);
 }
 
 #atendimento{
@@ -223,7 +231,7 @@ p{
 }
 
 #atendimento h3{
-    color: #c9b4a2;
+    color: var(--color2);
     padding: 20px 10%;
 }
 
@@ -251,7 +259,7 @@ form {
 }
 
 label {
-    color: #c09f80;
+    color: var(--color2);
     letter-spacing: 2px;
 }
 
@@ -259,14 +267,14 @@ input, textarea {
     width: 100%;
     padding: 5px;
     margin: 5px 0;
-    color: #565656;
+    color: var(--color3);
     border: none;
     border-radius: 10px;
 }
 
-input[type=submit] {
+#control-nav {
     text-transform: uppercase;
-    color: #76323f;
+    color: var(--color1);
     font-weight: 600;
     border: none;
     transition: .5s;
@@ -274,7 +282,7 @@ input[type=submit] {
 
 input[type=submit]:hover {
     cursor: pointer;
-    background-color: #d7cec7;
+    background-color: var(--color4);
 }
 
 .rede-social img {
@@ -285,13 +293,13 @@ input[type=submit]:hover {
     padding: 10px;
     display: flex;
     align-items: center;
-    color: #565656;
+    color: var(--color3);
     font-size: 14px;
     transition: all .2s ease;
 }
 
 .rede-social:hover {
-    color: #76323f;
+    color: var(--color1);
 }
 
 .redes-sociais {
@@ -306,11 +314,11 @@ input,button,textarea{
 }
 
 footer {
-    background-color: #76323f;
+    background-color: var(--color1);
     text-align: center;
     margin-top: 20px;
     padding: 20px;
-    color: #d7cec7;
+    color: var(--color4);
     font-size: 15px;
     font-weight: 100;
 }
@@ -321,13 +329,52 @@ footer img{
 }
 
 @media screen and (max-width:900px) {
-
-    .menu {
-        justify-content: space-around;
-        align-items: center;
-        flex-flow: column;
+    header{
+        flex-direction: column;
+        align-items: flex-start;
     }
 
+    ul {
+        flex-direction: column;
+        text-align: center;
+        display: none;
+        transition: all .3s ease;
+    }
+
+    li{
+        border-top: solid 1px var(--color2);
+        padding: 5px;
+    }
+
+    header .control-nav {
+        position: absolute;
+        right: 20px;
+        top: 30px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #c09f80;
+        border-width: 4px 0;
+        z-index: 2;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    header .control-nav:before {
+        content: "";
+        display: none;
+        height: 3px;
+        background: #333;
+    }
+
+    #control-nav:checked + .control-nav{
+        transform: rotate(90deg);
+    }
+
+    #control-nav:checked ~ ul{
+        display: block;
+    }
+    
     #logo {
         height: 65px;
     }
@@ -351,12 +398,6 @@ footer img{
 }
 
 @media screen and (max-width:600px) {
-    .menu li{
-        font-size: 12px;
-        margin: 5px 0;
-
-    }
-
     h1 {
         font-size: 50px;
     }
