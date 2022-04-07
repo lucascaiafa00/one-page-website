@@ -18,7 +18,7 @@ function changeService(direction) {
         currentService = 0
     } 
     else if(currentService < 0){
-        currentService = 4
+        currentService = 3
     }
     services[currentService].classList.add("show")
         
