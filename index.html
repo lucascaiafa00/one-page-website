@@ -45,7 +45,22 @@
             <img class="servico-icon" src="img/tesoura.png" alt="">
             <p>Corte de cabelo feminino e masculino, escova, tratamentos capilares, colorimetria, luzes, mechas, escova
                 progressiva e penteado.</p>
-            <button class="fotos-button" onclick="showFotos()">fotos</button>
+            <button class="fotos-button" onclick="showImages(0)">fotos</button>
+            <div class="gallery">
+                <img data-full-image="img/cabelo/colorimetria-full.jpg" src="img/cabelo/colorimetria.jpeg" alt="colorimetria">
+                <img data-full-image="img/cabelo/corte-full.jpg" src="img/cabelo/corte.jpeg" alt="corte">
+                <img data-full-image="img/cabelo/corte-2-full.jpg" src="img/cabelo/corte-2.jpg" alt="corte">
+                <img data-full-image="img/cabelo/corte-3-full.jpg" src="img/cabelo/corte-3.jpg" alt="corte">
+                <img data-full-image="img/cabelo/corte-4-full.jpg" src="img/cabelo/corte-4.jpg" alt="corte">
+                <img data-full-image="img/cabelo/luzes-full.jpg" src="img/cabelo/luzes.jpg" alt="luzes">
+                <img data-full-image="img/cabelo/mechas-full.jpg" src="img/cabelo/mechas.jpg" alt="mechas">
+                <img data-full-image="img/cabelo/mechas-2-full.jpg" src="img/cabelo/mechas-2.jpg" alt="mechas">
+                <img data-full-image="img/cabelo/penteado-full.jpg" src="img/cabelo/penteado.jpg" alt="penteado">
+                <img data-full-image="img/cabelo/penteado-2-full.jpg" src="img/cabelo/penteado-2.jpg" alt="penteado">
+                <img data-full-image="img/cabelo/penteado-3-full.jpg" src="img/cabelo/penteado-3.jpg" alt="penteado">
+                <img data-full-image="img/cabelo/progressiva-full.jpg" src="img/cabelo/progressiva.jpg" alt="progressiva">
+                
+            </div>
         </div>
         <div class="servico">
             <h3>design de sobrancelhas</h3>
@@ -70,6 +85,11 @@
 
         <button class="prev" onclick="changeService('prev')"></button>
         <button class="next" onclick="changeService('next')"></button>
+
+        <div id="full-img-container">
+            <button onclick="closeImage()" id="close"></button>
+            <img src="" id="full-img">
+        </div>
 
         <img class="wave" src="img/svg (2).png" alt="wave">
     </section>
