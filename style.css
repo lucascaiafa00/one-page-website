@@ -436,6 +436,10 @@ footer img{
         border-top: solid 1px var(--color2);
         padding: 5px;
     }
+    
+    #inicio{
+        padding-top: 20vh;
+    }
 
     header .control-nav {
         position: absolute;
