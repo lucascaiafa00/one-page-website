@@ -2,6 +2,6 @@
 
 <p>A simple responsive website<p/>
 <p align="center">
-  <img src="/image/print-1" width="650"/>
-  <img src="/image/print-2" width="250"/>
+  <img src="/image/print-1.png" width="650"/>
+  <img src="/image/print-2.jpeg" width="250"/>
 </p>
