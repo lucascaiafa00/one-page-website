@@ -80,11 +80,8 @@ a{
 }
 
 #inicio {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
     text-align: center;
-    min-height: 600px;
+    padding-top: 30vh;
 }
 
 h1 {
