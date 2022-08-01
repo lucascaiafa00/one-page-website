@@ -33,13 +33,12 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 15px;
-    width: 85%;
-    padding: 5px 20px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10%;
     background-color: var(--color1);
-    border: solid 2px var(--color2);
+    border-bottom: solid 1px var(--color2);
     z-index: 2;
 }
 
@@ -49,14 +48,15 @@ input[type=checkbox]{
 
 ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     list-style: none;
-    width: 100%;
+    width: 60%;
 }
 
 ul a {
     color: var(--color4);
     text-transform: uppercase;
+    transition: all ease .3s;
 }
 
 ul a:hover{
@@ -428,6 +428,7 @@ footer img{
         flex-direction: column;
         text-align: center;
         height: 0;
+        width: 100%;
         overflow: hidden;
         transition: all .3s ease;
     }
@@ -436,14 +437,10 @@ footer img{
         border-top: solid 1px var(--color2);
         padding: 5px;
     }
-    
-    #inicio{
-        padding-top: 20vh;
-    }
 
     header .control-nav {
         position: absolute;
-        right: 20px;
+        right: 10%;
         top: 30px;
         display: block;
         width: 30px;
